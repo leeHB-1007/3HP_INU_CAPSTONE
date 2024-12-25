@@ -81,6 +81,7 @@ const config: Config = {
       },
       fontFamily: {
         lobster: ['var(--font-lobster)', 'sans-serif'],
+        ghanachocolate: ["Ghanachocolate", "sans-serif"],
       },
     },
   },

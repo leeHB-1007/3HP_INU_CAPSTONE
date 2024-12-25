@@ -10,7 +10,7 @@ export default function InitialAnimate() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
   const controls = useAnimation();
 
-  const onBoardText = useTypeWord("딥페이크를 막기 위한 최고의 선택", 45);
+  const onBoardText = useTypeWord("Defend Your Photos", 45);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -71,25 +71,36 @@ export default function InitialAnimate() {
     <>
       <AnimatePresence>
         {showInitialMessage && (
-          <motion.div
-            className="flex flex-col justify-center items-center w-screen h-screen"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 1 }}
-          >
-            <p className="text-xl text-center md:text-4xl font-ghanachocolate text-stone-800">
-              {onBoardText}
-            </p>
-            <motion.span
-              className="text-lg text-center sm:text-base md:text-xl font-scoreRegular mt-6 text-stone-800"
+          <motion.div className="flex flex-col justify-center items-center w-screen h-screen bg-gradient-to-t from-gray-400 to-white p-8">
+            {/* 첫 번째 텍스트 */}
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.6 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 1 }}
             >
-              인천대학교 컴퓨터공학부 캡스톤 디자인 <span className="font-bold">3HP</span>조
-              입니다.
-            </motion.span>
+              <motion.p
+                className="text-xl text-center md:text-4xl font-ghanachocolate text-stone-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+
+                transition={{ duration: 0.8 }}
+              >
+                {onBoardText}
+              </motion.p>
+
+              {/* 두 번째 텍스트 */}
+              <motion.span
+                className="text-lg text-center sm:text-base md:text-xl font-scoreRegular mt-6 text-stone-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.8, delay: 1.3 }}
+              >
+                안녕하세요 인천대학교 컴퓨터공학부 캡스톤 디자인{" "}
+                <span className="font-bold">3HP</span>조 입니다.
+              </motion.span>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
