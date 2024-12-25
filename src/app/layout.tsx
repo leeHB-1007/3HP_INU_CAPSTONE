@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lobster } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const lobster = Lobster({
+    subsets: ['latin'], // 사용하고자 하는 subset
+    weight: '400', // 필요한 weight
+    variable: '--font-lobster', // CSS 변수 이름
+  });
 
 export const metadata: Metadata = {
   title: "Create Next App",

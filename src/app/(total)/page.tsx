@@ -37,7 +37,7 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>정말 딥페이크 방지가 가능한가요?2</AccordionTrigger>
+            <AccordionTrigger>어떻게 딥페이크 방지가 가능한가요?2</AccordionTrigger>
             <AccordionContent>
               아직 미정2
             </AccordionContent>

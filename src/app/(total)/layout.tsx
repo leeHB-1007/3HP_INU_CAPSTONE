@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import InitialAnimate from "./initailAnimate";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="">
+        <InitialAnimate />
       <header className="flex gap-6 items-center justify-between sticky top-0 w-full z-50 box-border py-6 px-20 h-20 bg-white shadow-md">
-        <Link href={"/"} className="font-bold text-4xl font-sans">
+        <Link href={"/"} className="font-bold text-4xl font-lobster">
           3HP       
           {/* 더꾸미기 */}
         </Link>
