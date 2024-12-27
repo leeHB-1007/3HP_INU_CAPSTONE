@@ -81,19 +81,25 @@ import React, {
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
         >
-          <div>{isDragging ? "여기다가 넣어주세요!" : "드래그 하거나 파일을 선택하세요"}</div>
+  <div className="align-center items-center">
+    {isDragging
+      ? "여기다가 넣어주세요!" 
+      : imageSrc 
+        ? "" 
+        : "드래그 하거나 파일을 선택하세요"}
+  </div>
         </label>
         {imageSrc && (
-          <div style={{ marginTop: "20px", textAlign: "center" }}>
+          <div style={{ marginTop: "20px", textAlign: "center" }} className="p-20">
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
               <div>
                 <h4>Uploaded Image</h4>
-                <Image src={imageSrc} alt="Uploaded" width={150} height={150} />
+                <Image src={imageSrc} alt="Uploaded" width={600} height={600} />
               </div>
               <div style={{ fontSize: "24px" }}>➡️</div>
               <div>
                 <h4>Downloadable Image</h4>
-                <Image src={imageSrc} alt="Downloadable" width={150} height={150} />
+                <Image src={imageSrc} alt="Downloadable" width={600} height={600} />
               </div>
             </div>
             <button
