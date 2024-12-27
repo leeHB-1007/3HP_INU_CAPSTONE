@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {isAnimationComplete && (
         <>
           <header className="flex gap-6 items-center justify-between sticky top-0 w-full z-50 box-border py-6 px-20 h-20 bg-white shadow-md">
-            <Link href={"/"} className="font-bold text-4xl font-lobster">
+            <Link href={"/"} className="font-bold text-4xl font-ghanachocolate">
               3HP
               {/* 더꾸미기 */}
             </Link>
