@@ -90,7 +90,7 @@ import React, {
   </div>
         </label>
         {imageSrc && (
-          <div style={{ marginTop: "20px", textAlign: "center" }} className="p-20">
+          <div style={{ marginTop: "20px", textAlign: "center" }} className="p-22">
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
               <div>
                 <h4>Uploaded Image</h4>
