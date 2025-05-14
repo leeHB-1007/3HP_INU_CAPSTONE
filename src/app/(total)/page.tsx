@@ -61,11 +61,11 @@ export default function Home() {
           </div>
 
           <Image
-            src="/iphone.png"
+            src="/pphone.png"
             alt="딥페이크 방지"
-            width={500}
-            height={300}
-            className="rounded-lg shadow-lg"
+            width={800}
+            height={400}
+            className="rounded-lg "
           />
 
           <Accordion type="single" collapsible>
